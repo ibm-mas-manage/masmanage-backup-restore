@@ -1,0 +1,3 @@
+# Backup and Restore
+
+Backup and restore of running containerized applications is a critical task. Without this capability, organizations run the risk of disruption of service and unplanned downtime. This article outlines the architecture, setup, and configure the OADP operator for backup and restoring the Manage application in the OpenShift cluster. OADP is the OpenShift API for the Data Protection operator. This open-source operator sets up and installs [Velero](https://velero.io/) on the OpenShift platform, allowing users to backup and restore applications.
