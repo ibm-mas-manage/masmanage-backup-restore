@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" /><link rel="canonical" href="https://ibm-mas-manage.github.io/backup-restore/" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Backup and Restore</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Backup and Restore";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = "/backup-restore/";
+      </script>
+    
+    <script src="js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> Backup and Restore
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href=".">Backup and Restore</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#backup">Backup</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-ibm-operator-catalog">1. IBM Operator Catalog</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-ibm-cloud-pak-foundational-services">2. IBM Cloud Pak Foundational Services</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-mongodb">3. MongoDb</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-ibm-sls">4. IBM SLS</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-maximo-application-suite-core-platform">5. Maximo Application Suite Core Platform</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#6-manage">6. Manage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#restore">Restore</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-ibm-operator-catalog_1">1. IBM Operator Catalog</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-cloud-pak-foundational-services">2. Cloud Pak Foundational Services</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-mongodb_1">3. MongoDb</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-sls">4. SLS</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-uds">5. UDS</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#6-mas-core">6. MAS Core</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#7-mas-manage">7. MAS Manage</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">Backup and Restore</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+      <li>Backup and Restore</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/ibm-mas-manage/backup-restore/blob/master/docs/index.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="disaster-recovery">Disaster Recovery<a class="headerlink" href="#disaster-recovery" title="Permanent link"></a></h1>
+<p>Backup and restore MAS following a catastrophic OCP failure.</p>
+<p>Scope: This process can only restore an environment running MAS Core.  It will be expanded to cover backup restore of applications over time.</p>
+<ul>
+<li>IBM Operator Catalog</li>
+<li>IBM Cloud Pak Foundational Services</li>
+<li>MongoDb</li>
+<li>IBM Suite License Service</li>
+<li>IBM Maximo Application Suite Core Platform</li>
+<li>IBM Manage</li>
+</ul>
+<h2 id="backup">Backup<a class="headerlink" href="#backup" title="Permanent link"></a></h2>
+<h3 id="1-ibm-operator-catalog">1. IBM Operator Catalog<a class="headerlink" href="#1-ibm-operator-catalog" title="Permanent link"></a></h3>
+<p>Resides in the <code>openshift-marketplace</code> namespace by default:</p>
+<ul>
+<li>We need to backup the version of the <code>ibm-operator-catalog</code> installed in the cluster</li>
+</ul>
+<h3 id="2-ibm-cloud-pak-foundational-services">2. IBM Cloud Pak Foundational Services<a class="headerlink" href="#2-ibm-cloud-pak-foundational-services" title="Permanent link"></a></h3>
+<p>Resides in the <code>ibm-common-services</code> namespace by default:</p>
+<ul>
+<li>Running <code>mas install</code> will suffice to restore these services</li>
+<li>If using a custom <code>ClusterIssuer</code> for MAS, we need to backup the MAS <code>ClusterIssuer</code>.  If using OOTB self-signed certificates, a re-install will generate a new self-signed certificate.</li>
+</ul>
+<h3 id="3-mongodb">3. MongoDb<a class="headerlink" href="#3-mongodb" title="Permanent link"></a></h3>
+<p>Resides in <code>mongodb-ce</code> namespace by default when using MongoDb Community Edition Operator:</p>
+<ul>
+<li>If using in-cluster MongoDb with MongoDb Community Edition Operator running <code>mas install</code> will suffice to create a new MongoDb service</li>
+<li>Run <code>mongodump</code> on the MAS database</li>
+<li>Run <code>mongodump</code> on the SLS database (usually this is in the same MongoDb cluster as the MAS database)</li>
+</ul>
+<h3 id="4-ibm-sls">4. IBM SLS<a class="headerlink" href="#4-ibm-sls" title="Permanent link"></a></h3>
+<p>Resides in <code>ibm-sls</code> namespace by default</p>
+<ul>
+<li>Backup the license file and ID</li>
+</ul>
+<h3 id="5-maximo-application-suite-core-platform">5. Maximo Application Suite Core Platform<a class="headerlink" href="#5-maximo-application-suite-core-platform" title="Permanent link"></a></h3>
+<p>Resides in <code>mas-{instanceId}-core</code> namespace</p>
+<ul>
+<li>Backup the <code>ibm-mas</code> Subscription and OperatorGroup</li>
+<li>Backup the <code>superuser-credentials</code> Secret</li>
+<li>Backup the <code>ibm-entitlement</code> Secret</li>
+<li>Backup the <code>Suite.core.mas.ibm.com</code> resource</li>
+<li>Backup all <code>Workspace.core.mas.ibm.com</code> resources</li>
+<li>Backup all <code>*.config.mas.ibm.com</code> resources</li>
+<li>Backup all <code>*.addons.mas.ibm.com</code> resources</li>
+</ul>
+<h3 id="6-manage">6. Manage<a class="headerlink" href="#6-manage" title="Permanent link"></a></h3>
+<ul>
+<li>Backup the <code>ibm-mas-manage</code> Subscription and OperatorGroup</li>
+<li>Backup the <code>ibm-entitlement</code> Secret</li>
+<li>Backup the <code>{instanceId}-manage-encryptionsecret</code> Secret</li>
+<li>Backup the <code>{instanceId}-manage-encryptionsecret-operator</code> Secret</li>
+<li>Backup the <code>{instanceId}-{workspaceId}-jdbccfg-workspace-application-binding</code> Secret</li>
+<li>Backup the <code>{workspaceId}-*-bundleproperty</code> Secrets</li>
+<li>Backup the <code>{workspaceId}-*-nonsystemproperty</code> Secrets</li>
+<li>Backup the <code>{instanceId}-{workspaceId}-internal-maximoproperty-secret</code> Secret</li>
+<li>Backup JMS server secrets <code>{workspacedId}-manage-d--sb*--asc--sn</code> Secrets if JMS Server is installed (Optional)</li>
+<li>Backup the <code>manageapps.apps.ibm.com</code> resource</li>
+<li>Backup the <code>manageworkspaces.apps.mas.ibm.com</code> resource</li>
+<li>Back up all attachments from the server pod (either all or UI) to an external location such as S3 if you are using Manage Attachments</li>
+</ul>
+<h2 id="restore">Restore<a class="headerlink" href="#restore" title="Permanent link"></a></h2>
+<h3 id="1-ibm-operator-catalog_1">1. IBM Operator Catalog<a class="headerlink" href="#1-ibm-operator-catalog_1" title="Permanent link"></a></h3>
+<ul>
+<li>Provide the version of the <code>ibm-operator-catalog</code> contained in the backup as the MAS Catalog Version when running <code>ROLE_NAME=ibm_catalogs ansible-playbook ibm.mas_devops.run_role</code></li>
+</ul>
+<h3 id="2-cloud-pak-foundational-services">2. Cloud Pak Foundational Services<a class="headerlink" href="#2-cloud-pak-foundational-services" title="Permanent link"></a></h3>
+<ul>
+<li>If using a custom <code>ClusterIssuer</code> provide the ClusterIssuer information from the backup when running <code>ROLE_NAME=ibm_common_services ansible-playbook ibm.mas_devops.run_role</code></li>
+</ul>
+<h3 id="3-mongodb_1">3. MongoDb<a class="headerlink" href="#3-mongodb_1" title="Permanent link"></a></h3>
+<ul>
+<li>If you need to restore the in-cluster MongoDb run <code>ROLE_NAME=mongodb ansible-playbook ibm.mas_devops.run_role</code></li>
+<li>After the install pipeline completes, run <code>mongorestore</code> on the MAS database</li>
+<li>After the install pipeline completes, run <code>mongorestore</code> on the SLS database</li>
+</ul>
+<h3 id="4-sls">4. SLS<a class="headerlink" href="#4-sls" title="Permanent link"></a></h3>
+<ul>
+<li>If you need to restore the in-cluster SLS provide the license file and ID contained in the backup when running <code>ROLE_NAME=sls ansible-playbook ibm.mas_devops.run_role</code></li>
+</ul>
+<h3 id="5-uds">5. UDS<a class="headerlink" href="#5-uds" title="Permanent link"></a></h3>
+<ul>
+<li>If you need to restore the in-cluster UDS run <code>ROLE_NAME=sls ansible-playbook ibm.mas_devops.run_role</code></li>
+</ul>
+<h3 id="6-mas-core">6. MAS Core<a class="headerlink" href="#6-mas-core" title="Permanent link"></a></h3>
+<ul>
+<li>Create the <code>ibm-mas</code> namespace</li>
+<li>Restore the <code>ibm-mas</code> OperatorGroup and Subscription, verify the operator installs successfully</li>
+<li>Restore the <code>superuser-credentials</code> Secret</li>
+<li>Restore the <code>ibm-entitlement</code> Secret</li>
+<li>Restore the <code>Suite.core.mas.ibm.com</code> resource</li>
+<li>Restore all <code>Workspace.core.mas.ibm.com</code> resources</li>
+<li>Restore all <code>*.config.mas.ibm.com</code> resources<ul>
+<li>If you are using a new in-cluster MongoDb instance set up in step 3, replace the system-scope MongoCfg in the backup with the new one generated in step 3</li>
+<li>If you are using a new in-cluster SLS instance set up in step 4, replace the system-scope SLSCfg in the backup with the new one generated in step 4</li>
+<li>If you are using a new in-cluster UDS instance set up in step 5, replace the system-scope SLSCfg in the backup with the new one generated in step 5</li>
+</ul>
+</li>
+<li>Restore all <code>*.addons.mas.ibm.com</code> resources</li>
+</ul>
+<h3 id="7-mas-manage">7. MAS Manage<a class="headerlink" href="#7-mas-manage" title="Permanent link"></a></h3>
+<ul>
+<li>Create the <code>ibm-mas-manage</code> namespace</li>
+<li>Restore the <code>ibm-mas-manage</code> OperatorGroup and Subscription, verify the operator installs successfully</li>
+<li>Restore the <code>ibm-entitlement</code> Secret</li>
+<li>Restore the <code>{instanceId}-manage-encryptionsecret</code> Secret</li>
+<li>Restore the <code>{instanceId}-manage-encryptionsecret-operator</code>Secret</li>
+<li>Restore the <code>{instanceId}-{workspaceId}-jdbccfg-workspace-application-binding</code> Secret</li>
+<li>Restore the <code>{workspaceId}-*-bundleproperty</code> Secrets</li>
+<li>Restore the <code>{workspaceId}-*-nonsystemproperty</code> Secrets</li>
+<li>Restore the <code>{instanceId}-{workspaceId}-internal--maximoproperty-secret</code> Secret</li>
+<li>Restore all the JMS secrets <code>{workspacedId}-manage-d--sb*--asc--sn</code> if JMS server is intalled (Optional)</li>
+<li>Restore the <code>manageapps.apps.ibm.com</code> resource</li>
+<li>Restore the <code>manageworkspaces.apps.ibm.com</code> resource</li>
+<li>Restore attachments from the external location if you are using Manage attachments</li>
+</ul>
+<p>Please note that in the event of a disaster, data in transit (i.e. queues/topics) cannot be restored. Therefore, it's important to enable message tracking so that the last processed message can be identified and the integration system can resume sending messages. Additionally, to prevent any data loss, storage replication is recommended.</p>
+<p><strong>Database</strong>: Use the provider's backup and restore process to create backups of and restore your database.</p>
+<ul>
+<li>DB2: https://www.ibm.com/docs/en/db2-warehouse?topic=warehouse-backup-restore-disaster-recovery</li>
+</ul>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/ibm-mas-manage/backup-restore" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme_extra.js" defer></script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.4.3
+Build Date UTC : 2023-05-20 19:00:18.663205+00:00
+-->
